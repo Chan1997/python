@@ -87,7 +87,7 @@ data = pd.read_excel(io='D:\Answer_1018.xlsx')
 # for ele in data.values:  # data.values二维数组形式
 #     print(ele[0], ele[1], ele[2])
 
- 
+
 
 
 #keywordStr = "高危产妇,高危产妇需做哪些检查,高龄高危产妇是多少岁,高危产妇注意事项,高危产妇能顺产吗,孕晚期糖尿病,糖尿病的原因,妊娠期糖尿病诊断标准,妊娠期糖尿病怎么办,糖尿病不能吃什么,糖尿病人能吃西瓜吗,糖尿病人食谱,糖尿病的饮食治疗,糖尿病饮食禁忌,糖尿病人吃什么主食,糖尿病能治好吗,治疗糖尿病的偏方,糖尿病治疗仪,糖尿病足的治疗,中医治疗糖尿病,糖尿病肾病,怎样预防糖尿病,糖尿病会传染吗,糖尿病酮症酸中毒,什么是糖尿病,孕妇糖尿病食谱,糖尿病的危害,糖尿病注意事项,糖尿病肾病分期,糖尿病手术,糖尿病视网膜病变,糖尿病眼病,糖尿病的症状,怀孕晚期,孕晚期肚疼,孕晚期补钙,孕晚期注意事项,孕晚期性生活,孕晚期见红,孕晚期宫缩,孕晚期吃什么好,孕晚期睡姿,孕晚期肚子硬,孕晚期腹痛,孕晚期营养,脐带绕颈一周怎么办,脐带绕颈怎么办,孕晚期食谱,孕晚期饮食,孕晚期喝什么奶粉好,孕晚期产检项目及最佳检查时间,孕晚期产检,如何缓解孕妇烧心,孕妇肥胖怎么办,孕晚期如厕,孕晚期饮食注意事项,孕妇心情不好,大肚子孕妇,怀孕36周,怀孕后期,怀孕后期注意事项"
@@ -95,13 +95,14 @@ data = pd.read_excel(io='D:\Answer_1018.xlsx')
 #keywordList = keywordStr.split(",")
 
 keywordList1 = ['宝宝不喝奶粉可以把奶粉放粥里吗']
-index = 1
+# index = 1
 for row in data.values:  # data.values二维数组形式
 
+    index = int(row[2])
     # if index >10000 :
     #     break
-    if index <= 42153:
-        index = index +1
+    if index <= 102020:
+        # index = index +1
         continue
 
 
@@ -111,7 +112,7 @@ for row in data.values:  # data.values二维数组形式
     heat = row[1]
     #id = row[0]
     #time = row[2]
-    print("当前索引："+str(index)+";关键词："+kw)
+    print("当前索引："+str(index)+";关键词："+str(kw))
 
 
     for reqNum in range(0,3):
